@@ -319,9 +319,9 @@ TASK18:
   loss: BCEWithLogitLoss
   process: normal
   task_id: 18
-  dataroot: datasets/flickr30k/
-  features_h5path1: datasets/flickr30k/flickr30k_resnext152_faster_rcnn_genome.lmdb
-  features_h5path2: datasets/flickr30k/flickr30k_gt_resnext152_faster_rcnn_genome.lmdb
+  dataroot: /data/s3860477/vilbert_data/datasets/flickr30k/
+  features_h5path1: /data/s3860477/vilbert_data/datasets/flickr30k/flickr30k_resnext152_faster_rcnn_genome.lmdb
+  features_h5path2: /data/s3860477/vilbert_data/datasets/flickr30k/flickr30k_gt_resnext152_faster_rcnn_genome.lmdb
   train_annotations_jsonpath: ''
   val_annotations_jsonpath: ''
   max_seq_length: 24
