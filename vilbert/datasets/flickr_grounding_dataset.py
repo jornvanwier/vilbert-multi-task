@@ -15,6 +15,8 @@ import _pickle as cPickle
 
 import xml.etree.ElementTree as ET
 
+DATASETS_PATH = '/run/media/jorn/Data/Datasets/'
+
 
 def iou(anchors, gt_boxes):
     """
@@ -261,7 +263,7 @@ class FlickrGroundingDataset(Dataset):
 
         with open(
             os.path.join(
-                "/data/s3860477/vilbert_data/flickr30k_entities", "%s.txt" % self.split
+                DATASETS_PATH, "flickr30k_entities", "%s.txt" % self.split
             ),
             "r",
         ) as f:
@@ -272,12 +274,12 @@ class FlickrGroundingDataset(Dataset):
                 continue
             annotation = get_annotations(
                 os.path.join(
-                    "/data/s3860477/vilbert_data/flickr30k_entities/Annotations", img + ".xml"
+                    DATASETS_PATH, "flickr30k_entities/Annotations", img + ".xml"
                 )
             )
             sentences = get_sentence_data(
                 os.path.join(
-                    "/data/s3860477/vilbert_data/flickr30k_entities/Sentences", img + ".txt"
+                    DATASETS_PATH, "flickr30k_entities/Sentences", img + ".txt"
                 )
             )
 
