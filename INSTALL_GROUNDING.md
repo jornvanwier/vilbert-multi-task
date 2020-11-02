@@ -17,6 +17,9 @@ conda install pytorch torchvision cudatoolkit=10.0 -c pytorch
 ```
 
 _OPTIONAL_ Install apex (in another directory, but same conda environment):
+
+You might run into an issue where your system cuda version doesn't match the version for the conda pytorch, 
+you can try commenting out the check in that case (worked for system cuda 11 with conda cuda 10) 
 ```
 cd ..
 git clone https://github.com/NVIDIA/apex
